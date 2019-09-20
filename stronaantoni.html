@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="kolejne próby">
+<meta name="keywords" content="kupa jeża">
+<meta name="robots" content="index">
+<meta name="author" content="monika">
+<meta http-equiv="content-language" content="pl">
+
+<link rel="stylesheet" type="text/css" href="stronaantoni.css">
+
+<title>4antoni
+</title>
+</head>
+<body>
+<div>
+
+<script type="text/javascript">
+
+/*
+function RightAnswer()
+            {
+                alert("Brawo, dobra odpowiedź!!!OTRZYMUJESZ 1 PUNKT!");
+				document.getElementsByName('radio').disabled = true;
+				console.log(document.getElementsByName('radio'));
+            }
+function WrongAnswer()
+            {
+                alert("Niestety, nie udało ci się!OTRZYMUJESZ 0 PUNKTÓW");
+				var f = document.getElementsByName('radio')
+				for (i=0; i < f.length; i++)
+					f[i].disabled = true;
+            }
+*/		
+var punkty=0;//wartość wyjściowa do liczenia punktów
+
+function odpowiedz(x,nameInput,idRight){ //zdefiniowanie funkcji z parametrem
+	if (x==true)
+        {alert("Brawo, dobra odpowiedź!!!OTRZYMUJESZ 1 PUNKT!");
+		punkty++;}//dodaje do prawisłowej odpwoiedzi punkt
+	else 
+		{alert("Niestety, nie udało ci się!OTRZYMUJESZ 0 PUNKTÓW");}
+console.log(punkty);				
+	var f = document.getElementsByName(nameInput)//stworzenie zmiennej, pobierającej dane w tym wypadku "radio"
+	for (i=0; i < f.length; i++) //pętla for na wszystkich lementach tablicy f
+		f[i].disabled = true;//wyłacza wszytkie odpowiedzi
+		
+	var pupa=document.getElementById(idRight);//stworzenie zmiennej wyszukującej id="1" jako prawidłowej
+	pupa.style.color='green';//kolorowanie zmiennej id="1"
+
+	
+	
+}
+
+		
+</script>
+
+
+
+
+<div id="baner"></div>
+<p class="ppp">Jak dobrze znasz swoją szkołę?</p>
+
+<div class="form">
+
+<img class="woj" src="wojpol.jpg">
+<form class="obrys">
+<fieldset>
+<legend>Wybierz prawidłową odpowiedź</legend>
+<p>Pod czyim Patronatem jest Twoja szkoła?</p>
+<br>
+<p><input type="radio" name="radio" value="1" ONCLICK="odpowiedz(false,'radio','1')">Świętego Mikołaja</p>
+<p><input type="radio" name="radio" value="2" ONCLICK="odpowiedz(false,'radio','1')">Jana Pawła II</p>
+<p id="1"><input type="radio" name="radio" value="3" ONCLICK="odpowiedz(true,'radio','1')">Wojska Polskiego</p>
+<p><input type="radio" name="radio" value="4" ONCLICK="odpowiedz(false,'radio','1')">Poległych Górników</p>
+</fieldset>
+</form>
+</div>
+<div class="form">
+<img class="woj" src="szkola1.jpg">
+
+<form class="obrys">
+<fieldset>
+<legend>Wybierz prawidłową odpowiedź</legend>
+<p>Ile balkonów ma Twoja szkoła?</p>
+<br>
+<p><input type="radio" name="balkon" value="1" ONCLICK="odpowiedz(false,'balkon','2')">1</p>
+<p id="2"><input type="radio" name="balkon" value="2" ONCLICK="odpowiedz(true,'balkon','2')">0</p>
+<p><input type="radio" name="balkon" value="3" ONCLICK="odpowiedz(false,'balkon','2')">3</p>
+<p><input type="radio" name="balkon" value="4" ONCLICK="odpowiedz(false,'balkon','2')">3</p>
+</fieldset>
+</form>
+</div>
+
+<div class="form">
+<img class="woj" src="sala.png">
+
+<form class="obrys">
+<fieldset>
+<legend>Wybierz prawidłową odpowiedź</legend>
+<p>Ile wynosi suma numerów sal klas drugich?</p>
+<br>
+<p><input type="radio" name="sala" value="1" ONCLICK="odpowiedz(false,'sala','3')">88</p>
+<p id="3"><input type="radio" name="sala" value="2" ONCLICK="odpowiedz(true,'sala','3')">90</p>
+<p><input type="radio" name="sala" value="3" ONCLICK="odpowiedz(false,'sala','3')">44</p>
+<p><input type="radio" name="sala" value="4" ONCLICK="odpowiedz(false,'sala','3')">120</p>
+</fieldset>
+</form>
+</div>
+<div class="form">
+<img class="woj" src="dzielnica.png">
+
+<form class="obrys">
+<fieldset>
+<legend>Wybierz prawidłową odpowiedź</legend>
+<p>W jakiej dzielnicy Łodzi znajduje się SP nr 139?</p>
+<br>
+<p id="4"><input type="radio" name="dzielnica" value="1" ONCLICK="odpowiedz(true,'dzielnica','4')">Widzew</p>
+<p><input type="radio" name="dzielnica" value="2" ONCLICK="odpowiedz(false,'dzielnica','4')">Polesie</p>
+<p><input type="radio" name="dzielnica" value="3" ONCLICK="odpowiedz(false,'dzielnica','4')">Stoki</p>
+<p><input type="radio" name="dzielnica" value="4" ONCLICK="odpowiedz(false,'dzielnica','4')">Retkinia</p>
+</fieldset>
+</form>
+</div>
+
+<div class="form">
+<img class="woj" src="sztandar.jpg">
+
+<form class="obrys">
+<fieldset>
+<legend>Wybierz prawidłową odpowiedź</legend>
+<p>Na którym piętrze przechowywany jest sztandar szkoły?</p>
+<br>
+<p id="5"><input type="radio" name="sztandar" value="1" ONCLICK="odpowiedz(true,'sztandar','5')">pierwszym</p>
+<p><input type="radio" name="sztandar" value="2" ONCLICK="odpowiedz(false,'sztandar','5')">drugim</p>
+<p><input type="radio" name="sztandar" value="3" ONCLICK="odpowiedz(false,'sztandar','5')">trzecim</p>
+<p><input type="radio" name="sztandar" value="4" ONCLICK="odpowiedz(false,'sztandar','5')">piątym</p>
+</fieldset>
+</form>
+</div>
+
+<div class="form">
+<img class="woj1" src="cyfry.jpg">
+
+<form class="obrys">
+<fieldset id="fieldset1">
+<legend>Wybierz prawidłową odpowiedź</legend>
+<p>Ile wynosi suma cyfr znajdujących się w numerze szkoły?</p>
+<br>
+<p><input type="radio" name="cyfry" value="1" ONCLICK="odpowiedz(false,'cyfry','6')">10</p>
+<p><input type="radio" name="cyfry" value="2" ONCLICK="odpowiedz(false,'cyfry','6')">9</p>
+<p id="6"><input type="radio" name="cyfry" value="3" ONCLICK="odpowiedz(true,'cyfry','6')">13</p>
+<p><input type="radio" name="cyfry" value="4" ONCLICK="odpowiedz(false,'cyfry','6')">139</p>
+</fieldset>
+</form>
+</div>
+
+<div class="form">
+<img class="woj" src="uczniowie.png">
+
+<form class="obrys">
+<fieldset>
+<legend>Wybierz prawidłową odpowiedź</legend>
+<p>Ilu uczniów jest w obecnych klasach drugich?</p>
+<br>
+<p><input type="radio" name="uczniowie" value="1" ONCLICK="odpowiedz(false,'uczniowie','7')">27</p>
+<p><input type="radio" name="uczniowie" value="2" ONCLICK="odpowiedz(false,'uczniowie','7')">52</p>
+<p><input type="radio" name="uczniowie" value="3" ONCLICK="odpowiedz(false,'uczniowie','7')">53</p>
+<p id="7"><input type="radio" name="uczniowie" value="4" ONCLICK="odpowiedz(true,'uczniowie','7')">54</p>
+</fieldset>
+</form>
+</div>
+
+<div class="form">
+<img class="woj" src="ulica.jpg">
+
+<form class="obrys">
+<fieldset>
+<legend>Wybierz prawidłową odpowiedź</legend>
+<p>Przy jakiej ulicy mieści się szkoła?</p>
+<br>
+<p><input type="radio" name="ulica" value="1" ONCLICK="odpowiedz(false,'ulica','8')">Pomorskiej</p>
+<p id="8"><input type="radio" name="ulica" value="2" ONCLICK="odpowiedz(true,'ulica','8')">Giewont</p>
+<p><input type="radio" name="ulica" value="3" ONCLICK="odpowiedz(false,'ulica','8')">Telefonicznej</p>
+<p><input type="radio" name="ulica" value="4" ONCLICK="odpowiedz(false,'ulica','8')">Brzezińskiej</p>
+</fieldset>
+</form>
+</div>
+
+<div class="form">
+<img class="woj" src="dyrekcja.png">
+
+<form class="obrys">
+<fieldset>
+<legend>Wybierz prawidłową odpowiedź</legend>
+<p>Jak nazywa się Pani Dyrektor?</p>
+<br>
+<p id="9"><input type="radio" name="dyrekcja" value="1" ONCLICK="odpowiedz(true,'dyrekcja','9')">Dorota Kazimierczyk</p>
+<p><input type="radio" name="dyrekcja" value="2" ONCLICK="odpowiedz(false,'dyrekcja','9')">Dorota Kaczmarek</p>
+<p><input type="radio" name="dyrekcja" value="3" ONCLICK="odpowiedz(false,'dyrekcja','9')">Maria Curie-Skłodowska</p>
+<p><input type="radio" name="dyrekcja" value="4" ONCLICK="odpowiedz(false,'dyrekcja','9')">Maria Konopnicka</p>
+</fieldset>
+</form>
+</div>
+
+<div id="belka"> Masz /9 możliwych punktów! Gratulacje!
+
+<!--
+<script type="text/javascript">
+alert("masz tyle punktów: "+punkty);
+
+var belka=document.getElementById(belka);//stworzenie zmiennej wyszukującej id="1" jako prawidłowej
+	belka.style.color='green';//kolorowanie zmiennej id="1"</script><p>policzone()</p>
+	
+-->
+<script type="text/javascript">
+
+function dodaj(punkty)
+
+{
+
+  var punkty =punkty++;
+
+  return punty;
+
+}
+
+var wartosc = dodaj(punkty++);
+
+document.write("Wynikiem dodawania 11 + 12 jest " + punkty + ".");
+
+</script>	
+
+</div>
+</div>
+</body>
+</html>
