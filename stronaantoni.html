@@ -35,28 +35,23 @@ function WrongAnswer()
 var punkty=0;//wartość wyjściowa do liczenia punktów
 
 function odpowiedz(x,nameInput,idRight){ //zdefiniowanie funkcji z parametrem
-	if (x==true)
-        {alert("Brawo, dobra odpowiedź!!!OTRZYMUJESZ 1 PUNKT!");
-		punkty++;}//dodaje do prawisłowej odpwoiedzi punkt
-	else 
-		{alert("Niestety, nie udało ci się!OTRZYMUJESZ 0 PUNKTÓW");}
-console.log(punkty);				
+	if (x==true){
+		alert("Brawo, dobra odpowiedź!!! OTRZYMUJESZ 1 PUNKT !");
+		punkty++;
+	}//dodaje do prawisłowej odpwoiedzi punkt
+	else{
+		alert("Niestety, nie udało ci się! OTRZYMUJESZ 0 PUNKTÓW :(");
+	}
 	var f = document.getElementsByName(nameInput)//stworzenie zmiennej, pobierającej dane w tym wypadku "radio"
 	for (i=0; i < f.length; i++) //pętla for na wszystkich lementach tablicy f
 		f[i].disabled = true;//wyłacza wszytkie odpowiedzi
-		
 	var pupa=document.getElementById(idRight);//stworzenie zmiennej wyszukującej id="1" jako prawidłowej
 	pupa.style.color='green';//kolorowanie zmiennej id="1"
-
-	
-	
+	document.getElementById("belka").innerHTML = "Masz "+punkty+"/9 możliwych punktów! Gratulacje!"
 }
 
 		
 </script>
-
-
-
 
 <div id="baner"></div>
 <p class="ppp">Jak dobrze znasz swoją szkołę?</p>
@@ -203,35 +198,7 @@ console.log(punkty);
 </form>
 </div>
 
-<div id="belka"> Masz /9 możliwych punktów! Gratulacje!
-
-<!--
-<script type="text/javascript">
-alert("masz tyle punktów: "+punkty);
-
-var belka=document.getElementById(belka);//stworzenie zmiennej wyszukującej id="1" jako prawidłowej
-	belka.style.color='green';//kolorowanie zmiennej id="1"</script><p>policzone()</p>
-	
--->
-<script type="text/javascript">
-
-function dodaj(punkty)
-
-{
-
-  var punkty =punkty++;
-
-  return punty;
-
-}
-
-var wartosc = dodaj(punkty++);
-
-document.write("Wynikiem dodawania 11 + 12 jest " + punkty + ".");
-
-</script>	
-
-</div>
+<div id="belka"> Powodzenia</div>
 </div>
 </body>
 </html>
